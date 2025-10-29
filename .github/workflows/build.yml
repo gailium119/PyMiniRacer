@@ -73,13 +73,10 @@ jobs:
         python-version: '3.11'
         
     - name: Windows SDK Install
-      uses: ChristopheLav/windows-sdk-install@v1.0.4
+      uses: GuillaumeFalourd/setup-windows10-sdk-action@v2
       with:
-         # Target version of the Windows SDK
-         version-sdk: 22621
-         # Features of the Windows SDK to install separated by a comma
-         features: 'OptionId.UWPCPP,OptionId.WindowsDesktopDebuggers,OptionId.DesktopCPParm64,OptionId.DesktopCPParm,OptionId.DesktopCPPx64,OptionId.DesktopCPPx86'
-          
+          # SDK 5-digit version to install (e.g 17763, 18362, 19041, 20348, 22000, 22621, 26100)
+          sdk-version: 22621
     - name: Build wheel
       run: |
         set -e
