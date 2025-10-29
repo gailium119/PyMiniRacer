@@ -6,7 +6,7 @@ on:
   # For releases:
   push:
     branches:
-      - 'release/*'
+      - '*'
 
 concurrency:
   group: build-${{ github.head_ref }}
