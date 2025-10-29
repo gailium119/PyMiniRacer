@@ -44,7 +44,7 @@ path = "./hatch_build.py"
 dependencies = [
   # Used by depot_tools:
   "httplib2",
-
+  "PySocks",
   # Used by the build hook directly:
   "packaging",
 ]
@@ -133,8 +133,7 @@ detached = true
 dependencies = [
   "hatchling",
   "mypy>=1.0.0",
-  "pytest",
-  "PySocks"
+  "pytest"
 ]
 
 [tool.hatch.envs.types.scripts]
