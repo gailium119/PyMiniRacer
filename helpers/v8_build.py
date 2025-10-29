@@ -186,7 +186,7 @@ def ensure_depot_tools():
     if is_win():
         # Create git.bit and maybe other shortcuts used by the Windows V8 build tools:
         run(
-            pathjoin(get_depot_tools_path(), "bootstrap\\win", "win_tools.bat"),
+            pathjoin(get_depot_tools_path(), "bootstrap", "win_tools.bat"),
             cwd=get_depot_tools_path(),
         )
 
