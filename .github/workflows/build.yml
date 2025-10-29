@@ -4,6 +4,7 @@ on:
   # For PRs:
   pull_request: {}
   # For releases:
+  workflow_dispatch: {}
   push:
     branches:
       - '*'
