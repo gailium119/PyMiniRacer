@@ -75,7 +75,7 @@ jobs:
     - name: Build wheel
       run: |
         set -e
-        python3 -m pip install --upgrade build
+        python3 -m pip install --upgrade build PySocks
         python3 -m build --wheel
 
     - uses: actions/upload-artifact@v4
