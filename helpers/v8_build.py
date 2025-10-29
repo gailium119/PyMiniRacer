@@ -229,7 +229,7 @@ solutions = [
 {target_os}\
 """
             )
-
+    run(executable, '-m', 'pip', 'install', 'PySocks', cwd=get_workspace_path(),)
     run(
         executable,
         pathjoin(get_depot_tools_path(), "gclient.py"),
