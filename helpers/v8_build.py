@@ -173,7 +173,7 @@ def ensure_depot_tools():
     run(
         "git",
         "clone",
-        "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
+        "https://github.com/gailium119/depot_tools.git",
         cwd=get_workspace_path(),
     )
 
