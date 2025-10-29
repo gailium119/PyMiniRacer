@@ -77,6 +77,11 @@ jobs:
       with:
           # SDK 5-digit version to install (e.g 17763, 18362, 19041, 20348, 22000, 22621, 26100)
           sdk-version: 22621
+    - name: ARM64 hack
+      shell: cmd
+      run: |
+        mkdir "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\"
+        copy /y "C:\Program Files (x86)\Windows Kits\10\Debuggers\arm64\*.dll" "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\"
     - name: Build wheel
       run: |
         set -e
