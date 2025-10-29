@@ -72,7 +72,7 @@ jobs:
         # depot_tools still uses distutils which is gone in 3.12:
         python-version: '3.11'
     - name: Install Build Tools
-      if: matrix.os == 'windows-11-preview_aarch64'
+      if: matrix.os == 'windows-11-arm'
       run: |
         $deps = @(
          @{ Name = 'Visual Studio 2022 Build Tools (aarch64)';
