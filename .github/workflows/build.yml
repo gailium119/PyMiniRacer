@@ -72,10 +72,14 @@ jobs:
         # depot_tools still uses distutils which is gone in 3.12:
         python-version: '3.11'
         
-    - name: Install Windows SDK
-      uses: Lamparter/Install-WindowsSdk@v1.0.0
+    - name: Windows SDK Install
+      uses: ChristopheLav/windows-sdk-install@v1.0.4
       with:
-        buildNumber: '22621'
+         # Target version of the Windows SDK
+         version-sdk: 22621
+         # Features of the Windows SDK to install separated by a comma
+         features: 'OptionId.UWPCPP,OptionId.DesktopCPParm64,OptionId.DesktopCPParm,OptionId.DesktopCPPx64,OptionId.DesktopCPPx86'
+          
     - name: Build wheel
       run: |
         set -e
