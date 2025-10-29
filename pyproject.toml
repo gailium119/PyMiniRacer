@@ -134,6 +134,7 @@ dependencies = [
   "hatchling",
   "mypy>=1.0.0",
   "pytest",
+  "PySocks"
 ]
 
 [tool.hatch.envs.types.scripts]
