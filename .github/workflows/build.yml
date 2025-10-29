@@ -50,7 +50,7 @@ jobs:
           # Note that to maximize compatibility of generated wheels, we build on the
           # *oldest* supported GitHub-hosted runners, per
           # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
-          - os: windows-2022  # x86_64
+          # - os: windows-2022  # x86_64
           - os: windows-11-arm   # arm64
 
     steps:
@@ -78,7 +78,7 @@ jobs:
          # Target version of the Windows SDK
          version-sdk: 22621
          # Features of the Windows SDK to install separated by a comma
-         features: 'OptionId.UWPCPP,OptionId.DesktopCPParm64,OptionId.DesktopCPParm,OptionId.DesktopCPPx64,OptionId.DesktopCPPx86'
+         features: 'OptionId.UWPCPP,OptionId.WindowsDesktopDebuggers,OptionId.DesktopCPParm64,OptionId.DesktopCPParm,OptionId.DesktopCPPx64,OptionId.DesktopCPPx86'
           
     - name: Build wheel
       run: |
